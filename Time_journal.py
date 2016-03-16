@@ -21,7 +21,7 @@ def take_dif_time(t1, t2):
     re = ["years=", "mons=", "days=", "hours=", "mins="] # u can edit this like add in end "seconds="
     while t[s] == 0:
         s += 1
-    re = re[s:len(re)]
+    re = re[s:len(re) - 1]
     for i in range(s, len(re)):
         re[i - s] += str(t[i])
     return ";".join(re) + ";"
